@@ -1,0 +1,342 @@
+@import './color';
+@import './animations';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 75px;
+}
+
+body {
+	font-family: 'Crimson Text', serif;
+	background-color: #f8f9fa;
+	color: $main-color;
+}
+
+.color-text {
+	color: $accent-color;
+}
+
+.shadow-bg {
+	background-color: rgba($color: #202020, $alpha: 0.9);
+}
+
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	height: 3px;
+	width: 70px;
+	background-color: $accent-color;
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.3s;
+	z-index: 5;
+
+	.nav-link,
+	.navbar-brand,
+	.fa-bars {
+		color: $main-color;
+	}
+	.nav-link,
+	.nav-link:focus,
+	.navbar-nav .nav-link.active,
+	.navbar-nav .nav-link.show,
+	.navbar-brand {
+		color: $accent-color;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.navbar-toggler {
+		padding: 10px 12px;
+	}
+	.navbar-collapse {
+		flex-grow: 0;
+	}
+}
+
+header.hero-img {
+	position: relative;
+	height: 100vh;
+	background-image: url(../img/horse-andalusian-small.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 1;
+}
+.hero-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.4);
+	z-index: -2;
+}
+
+.hero-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	z-index: 3;
+
+	h1 {
+		text-transform: uppercase;
+	}
+
+	p {
+		font-size: 17px;
+		top: 55%;
+	}
+}
+
+.fa-chevron-down {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	text-decoration: none;
+	top: 90%;
+	font-size: 30px;
+	color: $main-color;
+}
+
+main {
+	color: #000000;
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 20px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.icon1,
+	.icon2,
+	.icon3,
+	.icon4,
+	.icon5,
+	.icon6 {
+		transition: color 0.3s;
+	}
+
+	.icon1:hover,
+	.icon2:hover,
+	.icon3:hover,
+	.icon4:hover,
+	.icon5:hover,
+	.icon6:hover {
+		color: $accent-color;
+	}
+}
+
+.offer {
+	position: relative;
+	background-image: url(../img/horseWindow-small.jpg);
+	background-size: cover;
+	background-position: center;
+	color: white;
+	z-index: -1;
+
+	.offer-hero-item {
+		margin: 20px 0;
+		i {
+			font-size: 20px;
+		}
+	}
+
+	.hero-shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: #000000, $alpha: 0.6);
+	}
+}
+
+.carusel-container {
+	background-color: #f8f9fa;
+
+	.carousel {
+		margin: auto;
+		margin-bottom: 5vh;
+		width: 90%;
+	}
+	.carousel-caption {
+		background-color: rgba($color: #000000, $alpha: 0.7);
+		left: 0%;
+		right: 0%;
+	}
+}
+
+.card-container {
+	.space-between {
+		width: 20px;
+	}
+}
+
+.boarding {
+	.container {
+		margin: auto;
+	}
+	.small-underline {
+		margin: 0 auto 20px;
+		height: 1.5px;
+		width: 200px;
+		background-color: $accent-color;
+	}
+
+	.btn {
+		font-size: 17px;
+		cursor: default;
+	}
+	.boarding-cart {
+		text-align: center;
+		padding: 20px 15px;
+		margin: 30px;
+
+		background-color: #f7f1f1;
+		border: #000000 1px solid;
+		border-radius: 4% 18%;
+		box-shadow: 5px 5px 8px;
+		transition: transform 0.3s;
+
+		p {
+			font-size: 18px;
+		}
+
+		.title-boarding {
+			font-weight: 600;
+		}
+		span {
+			font-weight: bold;
+		}
+	}
+
+	.contact-info {
+		font-size: 18px;
+		margin: 20px;
+		i {
+			font-size: 15px;
+		}
+	}
+}
+
+.boarding-cart:hover {
+	transform: scale(1.05);
+}
+
+.contact-section {
+	position: relative;
+	background-attachment: fixed;
+	background-position: 0px 200px;
+	background-image: url(../img/horse-contact\ \(2\).jpg);
+	color: #f8f9fa;
+	height: 55vh;
+	background-size: cover;
+	z-index: 1;
+	.underline {
+		background-color: white;
+	}
+	.contact-us {
+		text-align: center;
+	}
+	.shadow-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: #464646, $alpha: 0.55);
+		z-index: -2;
+	}
+	.social-media{
+		font-size: 25px;
+		i{
+			transition: color 0.3s;
+		}
+i:hover{
+	color: $accent-color;
+}
+	}
+}
+
+.contact-form{
+	.btn{
+		font-weight: 500;
+		background-color: $accent-color;
+		border:1px  #535353 solid;
+	}
+}
+
+
+@media (max-width: 768px){
+	.contact-section{
+		background-image: url(../img/horse-contact-small.jpg);
+	
+		height: 100vh;
+		background-position: 0px 80px;
+	}
+	.contact-item{
+		margin-top: 30px;
+	}
+
+}
+
+
+
+@media (min-width: 768px) {
+	.hero-text {
+		h1 {
+			font-size: 40px;
+		}
+		p {
+			font-size: 25px;
+		}
+		
+	}
+
+	.contact-item{
+		margin-top: 30px;
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	.offer {
+		background-image: url(../img/horseWindow-big.jpg);
+	}
+
+	header.hero-img {
+		background-image: url('../img/horse-andalusian-big.jpg');
+	}
+
+	.social-media{
+		margin-top: 70px;
+	}
+}
